@@ -22,19 +22,19 @@ namespace MathUtils{
 
 		/// @brief Mathematical error code 
 		enum class MathErrorCode: std::uint32_t {
-			/// Bit 0 not set => Means no error 
+			/// Bit 0 (value 0x00 or 0) not set => Means no error 
 			E_OK          = 0x00,
-			/// bit 0 set - means that an error of any type happened
+			/// bit 0 (value 0x01 or 1) means that an error of any type happened
 			E_ERROR       = 0x01,
-			/// bit 1 - Overflow error 
+			/// bit 1 (value 0x02 or 2) Overflow error 
 			E_OVERFLOW    = 0x02,
-			/// bit 2 - Undeflow error 
+			/// bit 2 (value 0x04 or 4) Undeflow error 
 			E_UNDERFLOW   = 0x04,
-			/// bit 3 - Not a number
+			/// bit 3 (value 0x08 or 8) Not a number
 			E_NAN         = 0x08,
-			/// bit 4 -  Root, series or algorithm result doesn't converge.
+			/// bit 4 (value 0x10 or 16) Root, series or algorithm result doesn't converge.
 			E_CONVERGENCE = 0x10,
-			/// bit 5 - Maximum iterations reached 
+			/// bit 5  (value 0x20 or 16) Maximum iterations reached 
 			E_MAX_ITER    = 0x20   
 		};	
 		
