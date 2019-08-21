@@ -1,0 +1,131 @@
+\hypertarget{namespaceMathUtils_1_1Solvers}{\section{Math\-Utils\-:\-:Solvers Namespace Reference}
+\label{namespaceMathUtils_1_1Solvers}\index{Math\-Utils\-::\-Solvers@{Math\-Utils\-::\-Solvers}}
+}
+
+
+Contains non-\/linear equations solvers.  
+
+
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structMathUtils_1_1Base_1_1MathResult}{Math\-Result} \hyperlink{namespaceMathUtils_1_1Solvers_a8344f30567335607eb5b93893735fac6}{Newton\-Solver} (\hyperlink{namespaceMathUtils_1_1Base_a655889e83691f7f82ec161684afa2c1f}{Math\-Func} fun, \hyperlink{namespaceMathUtils_1_1Base_a655889e83691f7f82ec161684afa2c1f}{Math\-Func} dfun, double x0, double eps)
+\begin{DoxyCompactList}\small\item\em Solves non-\/linear equation with Newton method. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\auto \hyperlink{namespaceMathUtils_1_1Solvers_a1246e6c5ed93ca1e44d76ec54fed56fd}{Generic\-Newton\-Solver} (\hyperlink{namespaceMathUtils_1_1Base_a99755ccc9707a5ae2e93b4d9fbeb4391}{Math\-Func\-Gen}$<$ T $>$ fun, \hyperlink{namespaceMathUtils_1_1Base_a99755ccc9707a5ae2e93b4d9fbeb4391}{Math\-Func\-Gen}$<$ T $>$ dfun, T x0, T eps) -\/$>$ T
+\begin{DoxyCompactList}\small\item\em Solves non-\/linear equation with Newton method. \end{DoxyCompactList}\item 
+void \hyperlink{namespaceMathUtils_1_1Solvers_a281e598bf9fc6362c92a4b71098235bc}{clear\-\_\-screen} ()
+\begin{DoxyCompactList}\small\item\em Clear chart screen. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Contains non-\/linear equations solvers. 
+
+\subsection{Function Documentation}
+\hypertarget{namespaceMathUtils_1_1Solvers_a281e598bf9fc6362c92a4b71098235bc}{\index{Math\-Utils\-::\-Solvers@{Math\-Utils\-::\-Solvers}!clear\-\_\-screen@{clear\-\_\-screen}}
+\index{clear\-\_\-screen@{clear\-\_\-screen}!MathUtils::Solvers@{Math\-Utils\-::\-Solvers}}
+\subsubsection[{clear\-\_\-screen}]{\setlength{\rightskip}{0pt plus 5cm}void Math\-Utils\-::\-Solvers\-::clear\-\_\-screen (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{namespaceMathUtils_1_1Solvers_a281e598bf9fc6362c92a4b71098235bc}
+
+
+Clear chart screen. 
+
+\begin{DoxyReturn}{Returns}
+Void 
+\end{DoxyReturn}
+\hypertarget{namespaceMathUtils_1_1Solvers_a1246e6c5ed93ca1e44d76ec54fed56fd}{\index{Math\-Utils\-::\-Solvers@{Math\-Utils\-::\-Solvers}!Generic\-Newton\-Solver@{Generic\-Newton\-Solver}}
+\index{Generic\-Newton\-Solver@{Generic\-Newton\-Solver}!MathUtils::Solvers@{Math\-Utils\-::\-Solvers}}
+\subsubsection[{Generic\-Newton\-Solver}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ auto Math\-Utils\-::\-Solvers\-::\-Generic\-Newton\-Solver (
+\begin{DoxyParamCaption}
+\item[{{\bf Math\-Func\-Gen}$<$ T $>$}]{fun, }
+\item[{{\bf Math\-Func\-Gen}$<$ T $>$}]{dfun, }
+\item[{T}]{x0, }
+\item[{T}]{eps}
+\end{DoxyParamCaption}
+) -\/$>$  T}}\label{namespaceMathUtils_1_1Solvers_a1246e6c5ed93ca1e44d76ec54fed56fd}
+
+
+Solves non-\/linear equation with Newton method. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Any float-\/point type such as float, double or long double \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em fun} & Non-\/linear function f(x) \\
+\hline
+{\em dfun} & Derivative of non-\/linear function df(x) = d/dx f(x) \\
+\hline
+{\em x0} & Initial guess \\
+\hline
+{\em eps} & Tolerance for stopping criteria. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Equation result as a float point type T.
+\end{DoxyReturn}
+Solves non-\/linear equation using Newton method. This function needs two functions, the function to be solved {\ttfamily fun} and its derivate {\ttfamily dfun} 
+
+\begin{DoxyNote}{Note}
+The function f(x) must be continues and differentiable. 
+\end{DoxyNote}
+\begin{DoxyWarning}{Warning}
+Throws Non\-Coverge exception when the root is not found.
+\end{DoxyWarning}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{namespaceMathUtils_1_1Solvers_a8344f30567335607eb5b93893735fac6}{Newton\-Solver} 
+
+\href{https://en.wikipedia.org/wiki/Newton%27s_method}{\tt https\-://en.\-wikipedia.\-org/wiki/\-Newton\%27s\-\_\-method}
+\end{DoxySeeAlso}
+Example\-: 
+\begin{DoxyCode}
+\textcolor{comment}{// Solve f(x) = x^2 - 25.0 , df(x) = 2x around x0 = 10.0}
+\textcolor{keyword}{auto} fun = [](\textcolor{keywordtype}{double} x)\{ \textcolor{keywordflow}{return} x * x -  25.0 \};
+\textcolor{keyword}{auto} dfun = [](\textcolor{keywordtype}{double} x)\{ \textcolor{keywordflow}{return} 2 * x; \}
+ 
+\textcolor{keywordtype}{double} root = GenericNewtonsolver(fun, dfun, 10.0, 0.001);
+std::cout << \textcolor{stringliteral}{"Root = "} << root << std::endl;
+\end{DoxyCode}
+ \hypertarget{namespaceMathUtils_1_1Solvers_a8344f30567335607eb5b93893735fac6}{\index{Math\-Utils\-::\-Solvers@{Math\-Utils\-::\-Solvers}!Newton\-Solver@{Newton\-Solver}}
+\index{Newton\-Solver@{Newton\-Solver}!MathUtils::Solvers@{Math\-Utils\-::\-Solvers}}
+\subsubsection[{Newton\-Solver}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Math\-Result} Math\-Utils\-::\-Solvers\-::\-Newton\-Solver (
+\begin{DoxyParamCaption}
+\item[{{\bf Math\-Func}}]{fun, }
+\item[{{\bf Math\-Func}}]{dfun, }
+\item[{double}]{x0, }
+\item[{double}]{eps}
+\end{DoxyParamCaption}
+)}}\label{namespaceMathUtils_1_1Solvers_a8344f30567335607eb5b93893735fac6}
+
+
+Solves non-\/linear equation with Newton method. 
+
+Solves a non-\/linear equation using the Newton method which uses the function and its derivate function for finding a suitable approximation to the equation root.
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{namespaceMathUtils_1_1Base_a655889e83691f7f82ec161684afa2c1f}{Math\-Utils\-::\-Base\-::\-Math\-Func} 
+
+\href{https://en.wikipedia.org/wiki/Newton%27s_method}{\tt https\-://en.\-wikipedia.\-org/wiki/\-Newton\%27s\-\_\-method} 
+\end{DoxySeeAlso}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000001}{Todo}]Implement unit test with lots of test cases.\end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em fun} & Non-\/linear function f(x) \\
+\hline
+{\em dfun} & Derivative of non-\/linear function df(x) = d/dx f(x) \\
+\hline
+{\em x0} & Initial guess \\
+\hline
+{\em eps} & Tolerance for stopping criteria. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Equation result object containing result and error code. 
+\end{DoxyReturn}

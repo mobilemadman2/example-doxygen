@@ -1,0 +1,76 @@
+\hypertarget{namespaceMathUtils_1_1Base}{\section{Math\-Utils\-:\-:Base Namespace Reference}
+\label{namespaceMathUtils_1_1Base}\index{Math\-Utils\-::\-Base@{Math\-Utils\-::\-Base}}
+}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structMathUtils_1_1Base_1_1MathResult}{Math\-Result}
+\begin{DoxyCompactList}\small\item\em Represents a math numerical result with an error code. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \hyperlink{namespaceMathUtils_1_1Base_a655889e83691f7f82ec161684afa2c1f}{Math\-Func} = std\-::function$<$ double(double)$>$
+\begin{DoxyCompactList}\small\item\em Mathematical function of type double. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\using \hyperlink{namespaceMathUtils_1_1Base_a99755ccc9707a5ae2e93b4d9fbeb4391}{Math\-Func\-Gen} = std\-::function$<$ T(T)$>$
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{namespaceMathUtils_1_1Base_aac4088d82202217a0cea2b81ec0649a2}{Math\-Error\-Code} \-: std\-::uint32\-\_\-t \{ \\*
+\hyperlink{namespaceMathUtils_1_1Base_aac4088d82202217a0cea2b81ec0649a2aa02beabe6f35d74f47eb01520970b350}{Math\-Error\-Code\-::\-E\-\_\-\-O\-K} = 0x00, 
+\hyperlink{namespaceMathUtils_1_1Base_aac4088d82202217a0cea2b81ec0649a2a80e070750e5ff70ab6a0e04cf55b8d76}{Math\-Error\-Code\-::\-E\-\_\-\-E\-R\-R\-O\-R} = 0x01, 
+\hyperlink{namespaceMathUtils_1_1Base_aac4088d82202217a0cea2b81ec0649a2af60e76e9f5ffc969b1946811a7397b46}{Math\-Error\-Code\-::\-E\-\_\-\-O\-V\-E\-R\-F\-L\-O\-W} = 0x02, 
+\hyperlink{namespaceMathUtils_1_1Base_aac4088d82202217a0cea2b81ec0649a2afa96178e08af17a4ee3edebaec32d1af}{Math\-Error\-Code\-::\-E\-\_\-\-U\-N\-D\-E\-R\-F\-L\-O\-W} = 0x04, 
+\\*
+\hyperlink{namespaceMathUtils_1_1Base_aac4088d82202217a0cea2b81ec0649a2ae57d4e2d3045c76993a1130ccf754924}{Math\-Error\-Code\-::\-E\-\_\-\-N\-A\-N} = 0x08, 
+\hyperlink{namespaceMathUtils_1_1Base_aac4088d82202217a0cea2b81ec0649a2a804ef965d3982007bc8b7c61813179c8}{Math\-Error\-Code\-::\-E\-\_\-\-C\-O\-N\-V\-E\-R\-G\-E\-N\-C\-E} = 0x10, 
+\hyperlink{namespaceMathUtils_1_1Base_aac4088d82202217a0cea2b81ec0649a2af5d012c621ef34c94de8c173e861afcc}{Math\-Error\-Code\-::\-E\-\_\-\-M\-A\-X\-\_\-\-I\-T\-E\-R} = 0x20
+ \}
+\begin{DoxyCompactList}\small\item\em Mathematical error code. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{namespaceMathUtils_1_1Base_a655889e83691f7f82ec161684afa2c1f}{\index{Math\-Utils\-::\-Base@{Math\-Utils\-::\-Base}!Math\-Func@{Math\-Func}}
+\index{Math\-Func@{Math\-Func}!MathUtils::Base@{Math\-Utils\-::\-Base}}
+\subsubsection[{Math\-Func}]{\setlength{\rightskip}{0pt plus 5cm}using {\bf Math\-Utils\-::\-Base\-::\-Math\-Func} = typedef std\-::function$<$double (double)$>$}}\label{namespaceMathUtils_1_1Base_a655889e83691f7f82ec161684afa2c1f}
+
+
+Mathematical function of type double. 
+
+\hypertarget{namespaceMathUtils_1_1Base_a99755ccc9707a5ae2e93b4d9fbeb4391}{\index{Math\-Utils\-::\-Base@{Math\-Utils\-::\-Base}!Math\-Func\-Gen@{Math\-Func\-Gen}}
+\index{Math\-Func\-Gen@{Math\-Func\-Gen}!MathUtils::Base@{Math\-Utils\-::\-Base}}
+\subsubsection[{Math\-Func\-Gen}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ using {\bf Math\-Utils\-::\-Base\-::\-Math\-Func\-Gen} = typedef std\-::function$<$T (T)$>$}}\label{namespaceMathUtils_1_1Base_a99755ccc9707a5ae2e93b4d9fbeb4391}
+Generic math function 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Any float-\/point type such as float, double or long double \\
+\hline
+\end{DoxyTemplParams}
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{namespaceMathUtils_1_1Base_aac4088d82202217a0cea2b81ec0649a2}{\index{Math\-Utils\-::\-Base@{Math\-Utils\-::\-Base}!Math\-Error\-Code@{Math\-Error\-Code}}
+\index{Math\-Error\-Code@{Math\-Error\-Code}!MathUtils::Base@{Math\-Utils\-::\-Base}}
+\subsubsection[{Math\-Error\-Code}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Math\-Utils\-::\-Base\-::\-Math\-Error\-Code} \-: std\-::uint32\-\_\-t\hspace{0.3cm}{\ttfamily [strong]}}}\label{namespaceMathUtils_1_1Base_aac4088d82202217a0cea2b81ec0649a2}
+
+
+Mathematical error code. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{E\-\_\-\-O\-K@{E\-\_\-\-O\-K}!Math\-Utils\-::\-Base@{Math\-Utils\-::\-Base}}\index{Math\-Utils\-::\-Base@{Math\-Utils\-::\-Base}!E\-\_\-\-O\-K@{E\-\_\-\-O\-K}}\item[{\em 
+\hypertarget{namespaceMathUtils_1_1Base_aac4088d82202217a0cea2b81ec0649a2aa02beabe6f35d74f47eb01520970b350}{E\-\_\-\-O\-K}\label{namespaceMathUtils_1_1Base_aac4088d82202217a0cea2b81ec0649a2aa02beabe6f35d74f47eb01520970b350}
+}]Bit 0 (value 0x00 or 0) not set =$>$ Means no error. \index{E\-\_\-\-E\-R\-R\-O\-R@{E\-\_\-\-E\-R\-R\-O\-R}!Math\-Utils\-::\-Base@{Math\-Utils\-::\-Base}}\index{Math\-Utils\-::\-Base@{Math\-Utils\-::\-Base}!E\-\_\-\-E\-R\-R\-O\-R@{E\-\_\-\-E\-R\-R\-O\-R}}\item[{\em 
+\hypertarget{namespaceMathUtils_1_1Base_aac4088d82202217a0cea2b81ec0649a2a80e070750e5ff70ab6a0e04cf55b8d76}{E\-\_\-\-E\-R\-R\-O\-R}\label{namespaceMathUtils_1_1Base_aac4088d82202217a0cea2b81ec0649a2a80e070750e5ff70ab6a0e04cf55b8d76}
+}]bit 0 (value 0x01 or 1) means that an error of any type happened \index{E\-\_\-\-O\-V\-E\-R\-F\-L\-O\-W@{E\-\_\-\-O\-V\-E\-R\-F\-L\-O\-W}!Math\-Utils\-::\-Base@{Math\-Utils\-::\-Base}}\index{Math\-Utils\-::\-Base@{Math\-Utils\-::\-Base}!E\-\_\-\-O\-V\-E\-R\-F\-L\-O\-W@{E\-\_\-\-O\-V\-E\-R\-F\-L\-O\-W}}\item[{\em 
+\hypertarget{namespaceMathUtils_1_1Base_aac4088d82202217a0cea2b81ec0649a2af60e76e9f5ffc969b1946811a7397b46}{E\-\_\-\-O\-V\-E\-R\-F\-L\-O\-W}\label{namespaceMathUtils_1_1Base_aac4088d82202217a0cea2b81ec0649a2af60e76e9f5ffc969b1946811a7397b46}
+}]bit 1 (value 0x02 or 2) Overflow error \index{E\-\_\-\-U\-N\-D\-E\-R\-F\-L\-O\-W@{E\-\_\-\-U\-N\-D\-E\-R\-F\-L\-O\-W}!Math\-Utils\-::\-Base@{Math\-Utils\-::\-Base}}\index{Math\-Utils\-::\-Base@{Math\-Utils\-::\-Base}!E\-\_\-\-U\-N\-D\-E\-R\-F\-L\-O\-W@{E\-\_\-\-U\-N\-D\-E\-R\-F\-L\-O\-W}}\item[{\em 
+\hypertarget{namespaceMathUtils_1_1Base_aac4088d82202217a0cea2b81ec0649a2afa96178e08af17a4ee3edebaec32d1af}{E\-\_\-\-U\-N\-D\-E\-R\-F\-L\-O\-W}\label{namespaceMathUtils_1_1Base_aac4088d82202217a0cea2b81ec0649a2afa96178e08af17a4ee3edebaec32d1af}
+}]bit 2 (value 0x04 or 4) Undeflow error \index{E\-\_\-\-N\-A\-N@{E\-\_\-\-N\-A\-N}!Math\-Utils\-::\-Base@{Math\-Utils\-::\-Base}}\index{Math\-Utils\-::\-Base@{Math\-Utils\-::\-Base}!E\-\_\-\-N\-A\-N@{E\-\_\-\-N\-A\-N}}\item[{\em 
+\hypertarget{namespaceMathUtils_1_1Base_aac4088d82202217a0cea2b81ec0649a2ae57d4e2d3045c76993a1130ccf754924}{E\-\_\-\-N\-A\-N}\label{namespaceMathUtils_1_1Base_aac4088d82202217a0cea2b81ec0649a2ae57d4e2d3045c76993a1130ccf754924}
+}]bit 3 (value 0x08 or 8) Not a number \index{E\-\_\-\-C\-O\-N\-V\-E\-R\-G\-E\-N\-C\-E@{E\-\_\-\-C\-O\-N\-V\-E\-R\-G\-E\-N\-C\-E}!Math\-Utils\-::\-Base@{Math\-Utils\-::\-Base}}\index{Math\-Utils\-::\-Base@{Math\-Utils\-::\-Base}!E\-\_\-\-C\-O\-N\-V\-E\-R\-G\-E\-N\-C\-E@{E\-\_\-\-C\-O\-N\-V\-E\-R\-G\-E\-N\-C\-E}}\item[{\em 
+\hypertarget{namespaceMathUtils_1_1Base_aac4088d82202217a0cea2b81ec0649a2a804ef965d3982007bc8b7c61813179c8}{E\-\_\-\-C\-O\-N\-V\-E\-R\-G\-E\-N\-C\-E}\label{namespaceMathUtils_1_1Base_aac4088d82202217a0cea2b81ec0649a2a804ef965d3982007bc8b7c61813179c8}
+}]bit 4 (value 0x10 or 16) Root, series or algorithm result doesn't converge. \index{E\-\_\-\-M\-A\-X\-\_\-\-I\-T\-E\-R@{E\-\_\-\-M\-A\-X\-\_\-\-I\-T\-E\-R}!Math\-Utils\-::\-Base@{Math\-Utils\-::\-Base}}\index{Math\-Utils\-::\-Base@{Math\-Utils\-::\-Base}!E\-\_\-\-M\-A\-X\-\_\-\-I\-T\-E\-R@{E\-\_\-\-M\-A\-X\-\_\-\-I\-T\-E\-R}}\item[{\em 
+\hypertarget{namespaceMathUtils_1_1Base_aac4088d82202217a0cea2b81ec0649a2af5d012c621ef34c94de8c173e861afcc}{E\-\_\-\-M\-A\-X\-\_\-\-I\-T\-E\-R}\label{namespaceMathUtils_1_1Base_aac4088d82202217a0cea2b81ec0649a2af5d012c621ef34c94de8c173e861afcc}
+}]bit 5 (value 0x20 or 16) Maximum iterations reached \end{description}
+\end{Desc}

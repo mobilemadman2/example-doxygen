@@ -1,0 +1,86 @@
+\hypertarget{mathutils_8hpp}{\section{mathutils.\-hpp File Reference}
+\label{mathutils_8hpp}\index{mathutils.\-hpp@{mathutils.\-hpp}}
+}
+{\ttfamily \#include $<$cmath$>$}\\*
+{\ttfamily \#include $<$functional$>$}\\*
+{\ttfamily \#include $<$cstdint$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structMathUtils_1_1Base_1_1MathResult}{Math\-Utils\-::\-Base\-::\-Math\-Result}
+\begin{DoxyCompactList}\small\item\em Represents a math numerical result with an error code. \end{DoxyCompactList}\item 
+class \hyperlink{classMathUtils_1_1XYChart}{Math\-Utils\-::\-X\-Y\-Chart}
+\begin{DoxyCompactList}\small\item\em Class for plotting cuves, equations and differential equations. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespaceMathUtils}{Math\-Utils}
+\begin{DoxyCompactList}\small\item\em Contains fundamental type defintions used by the project. \end{DoxyCompactList}\item 
+\hyperlink{namespaceMathUtils_1_1Base}{Math\-Utils\-::\-Base}
+\item 
+\hyperlink{namespaceMathUtils_1_1Solvers}{Math\-Utils\-::\-Solvers}
+\begin{DoxyCompactList}\small\item\em Contains non-\/linear equations solvers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \hyperlink{namespaceMathUtils_1_1Base_a655889e83691f7f82ec161684afa2c1f}{Math\-Utils\-::\-Base\-::\-Math\-Func} = std\-::function$<$ double(double)$>$
+\begin{DoxyCompactList}\small\item\em Mathematical function of type double. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\using \hyperlink{namespaceMathUtils_1_1Base_a99755ccc9707a5ae2e93b4d9fbeb4391}{Math\-Utils\-::\-Base\-::\-Math\-Func\-Gen} = std\-::function$<$ T(T)$>$
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{namespaceMathUtils_1_1Base_aac4088d82202217a0cea2b81ec0649a2}{Math\-Utils\-::\-Base\-::\-Math\-Error\-Code} \-: std\-::uint32\-\_\-t \{ \\*
+\hyperlink{namespaceMathUtils_1_1Base_aac4088d82202217a0cea2b81ec0649a2aa02beabe6f35d74f47eb01520970b350}{Math\-Utils\-::\-Base\-::\-Math\-Error\-Code\-::\-E\-\_\-\-O\-K} = 0x00, 
+\hyperlink{namespaceMathUtils_1_1Base_aac4088d82202217a0cea2b81ec0649a2a80e070750e5ff70ab6a0e04cf55b8d76}{Math\-Utils\-::\-Base\-::\-Math\-Error\-Code\-::\-E\-\_\-\-E\-R\-R\-O\-R} = 0x01, 
+\hyperlink{namespaceMathUtils_1_1Base_aac4088d82202217a0cea2b81ec0649a2af60e76e9f5ffc969b1946811a7397b46}{Math\-Utils\-::\-Base\-::\-Math\-Error\-Code\-::\-E\-\_\-\-O\-V\-E\-R\-F\-L\-O\-W} = 0x02, 
+\hyperlink{namespaceMathUtils_1_1Base_aac4088d82202217a0cea2b81ec0649a2afa96178e08af17a4ee3edebaec32d1af}{Math\-Utils\-::\-Base\-::\-Math\-Error\-Code\-::\-E\-\_\-\-U\-N\-D\-E\-R\-F\-L\-O\-W} = 0x04, 
+\\*
+\hyperlink{namespaceMathUtils_1_1Base_aac4088d82202217a0cea2b81ec0649a2ae57d4e2d3045c76993a1130ccf754924}{Math\-Utils\-::\-Base\-::\-Math\-Error\-Code\-::\-E\-\_\-\-N\-A\-N} = 0x08, 
+\hyperlink{namespaceMathUtils_1_1Base_aac4088d82202217a0cea2b81ec0649a2a804ef965d3982007bc8b7c61813179c8}{Math\-Utils\-::\-Base\-::\-Math\-Error\-Code\-::\-E\-\_\-\-C\-O\-N\-V\-E\-R\-G\-E\-N\-C\-E} = 0x10, 
+\hyperlink{namespaceMathUtils_1_1Base_aac4088d82202217a0cea2b81ec0649a2af5d012c621ef34c94de8c173e861afcc}{Math\-Utils\-::\-Base\-::\-Math\-Error\-Code\-::\-E\-\_\-\-M\-A\-X\-\_\-\-I\-T\-E\-R} = 0x20
+ \}
+\begin{DoxyCompactList}\small\item\em Mathematical error code. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structMathUtils_1_1Base_1_1MathResult}{Math\-Result} \hyperlink{namespaceMathUtils_1_1Solvers_a8344f30567335607eb5b93893735fac6}{Math\-Utils\-::\-Solvers\-::\-Newton\-Solver} (\hyperlink{namespaceMathUtils_1_1Base_a655889e83691f7f82ec161684afa2c1f}{Math\-Func} fun, \hyperlink{namespaceMathUtils_1_1Base_a655889e83691f7f82ec161684afa2c1f}{Math\-Func} dfun, double x0, double eps)
+\begin{DoxyCompactList}\small\item\em Solves non-\/linear equation with Newton method. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\auto \hyperlink{namespaceMathUtils_1_1Solvers_a1246e6c5ed93ca1e44d76ec54fed56fd}{Math\-Utils\-::\-Solvers\-::\-Generic\-Newton\-Solver} (\hyperlink{namespaceMathUtils_1_1Base_a99755ccc9707a5ae2e93b4d9fbeb4391}{Math\-Func\-Gen}$<$ T $>$ fun, \hyperlink{namespaceMathUtils_1_1Base_a99755ccc9707a5ae2e93b4d9fbeb4391}{Math\-Func\-Gen}$<$ T $>$ dfun, T x0, T eps) -\/$>$ T
+\begin{DoxyCompactList}\small\item\em Solves non-\/linear equation with Newton method. \end{DoxyCompactList}\item 
+void \hyperlink{namespaceMathUtils_1_1Solvers_a281e598bf9fc6362c92a4b71098235bc}{Math\-Utils\-::\-Solvers\-::clear\-\_\-screen} ()
+\begin{DoxyCompactList}\small\item\em Clear chart screen. \end{DoxyCompactList}\item 
+auto \hyperlink{mathutils_8hpp_a9648f234c2af7046fa9e5819794c4527}{daxpy} (size\-\_\-t n, double const $\ast$xs, double $\ast$ys, double alpha, double beta) -\/$>$ void
+\begin{DoxyCompactList}\small\item\em C++ implementation of Fotran B\-L\-A\-S daxypy Computes the equation ys\mbox{[}i\mbox{]} $<$-\/ xs\mbox{[}i\mbox{]} $\ast$ alpha + beta. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{mathutils_8hpp_a9648f234c2af7046fa9e5819794c4527}{\index{mathutils.\-hpp@{mathutils.\-hpp}!daxpy@{daxpy}}
+\index{daxpy@{daxpy}!mathutils.hpp@{mathutils.\-hpp}}
+\subsubsection[{daxpy}]{\setlength{\rightskip}{0pt plus 5cm}auto daxpy (
+\begin{DoxyParamCaption}
+\item[{size\-\_\-t}]{n, }
+\item[{double const $\ast$}]{xs, }
+\item[{double $\ast$}]{ys, }
+\item[{double}]{alpha, }
+\item[{double}]{beta}
+\end{DoxyParamCaption}
+) -\/$>$  void}}\label{mathutils_8hpp_a9648f234c2af7046fa9e5819794c4527}
+
+
+C++ implementation of Fotran B\-L\-A\-S daxypy Computes the equation ys\mbox{[}i\mbox{]} $<$-\/ xs\mbox{[}i\mbox{]} $\ast$ alpha + beta. 
+
+\begin{DoxyNote}{Note}
+Function with C-\/linkage.
+\end{DoxyNote}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em n} & Array size. Size of xs and ys \\
+\hline
+\mbox{\tt in}  & {\em xs} & Input array xs \\
+\hline
+\mbox{\tt in,out}  & {\em ys} & Output array ys \\
+\hline
+\mbox{\tt in}  & {\em alpha} & Linear coefficient  Void \\
+\hline
+\end{DoxyParams}
